@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node app",
-    "test": "mocha",
-    "test:debug": "mocha --inspect-brk"
+    "test": "node ./node_modules/mocha/bin/mocha",
+    "test:debug": "node ./node_modules/mocha/bin/mocha --inspect-brk"
   },
   "description": "nodejs-webapp-express",
   "author": {
