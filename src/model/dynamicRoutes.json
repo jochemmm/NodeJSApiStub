@@ -1,0 +1,46 @@
+[
+   {
+      "url":"/api/helloworld",
+      "method":"GET",
+      "response":{
+         "status":200,
+         "body":{
+            "hello":"world"
+         }
+      }
+   },
+   {
+      "url":"/api/getacoke",
+      "method":"GET",
+      "response":{
+         "status":200,
+         "body":{
+            "can":"coke"
+         }
+      }
+   },
+   {
+      "url":"/api/getasprite",
+      "method":"GET",
+      "response":{
+         "status":500,
+         "body":{
+            "message":"jeg, please drink a coke"
+         }
+      }
+   },
+   {
+      "url":"/api/drinkcoke",
+      "method":"POST",
+      "response":{
+         "status":204
+      }
+   },
+   {
+      "url":"/api/drinkbeer",
+      "method":"POST",
+      "response":{
+         "status":400
+      }
+   }
+]

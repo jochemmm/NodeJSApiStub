@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h2 List of available API routes
+  each item in model
+    pre
+      form(method="post",action="/myroutes/delete")
+        input(type="submit",style="position:absolute;right:30px",value="Delete").btn.btn-default
+        input(type="hidden",name="url",value=item.url)
+        input(type="hidden",name="access_token",value=access_token)
+      sub Request:
+      p #{item.method} #{item.url}
+      sub Response:
+      br
+      span #{item.response.status} 
+      span= JSON.stringify(item.response.body)
+  br
+
+  h4 Add new route
+  form(method="post",action="/myroutes/add")
+    sub URI:
+    br
+    input(type="text",name="url",value="/api/")
+    br
+    sub Method (GET, POST, PUT, DELETE):
+    br
+    input(type="text",name="method",value="GET")
+    br
+    sub Response status:
+    br
+    input(type="number",name="response.status",value="200")
+    br
+    sub Response body:
+    br
+    textarea(name="response.body",cols="50",rows="5") {"property":"value"}
+    br
+    input(type="submit",value="Add",style="margin-top:5px;").btn.btn-info
+    input(type="hidden",name="access_token",value=access_token)

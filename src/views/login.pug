@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h2 Login to #[em My Routes] restricted area
+
+  if message && error
+    .alert.alert-danger(role="alert") #{message}
+  else if message
+    .alert.alert-success(role="alert") #{message}
+
+  form(method="post",action="/auth/login")
+    sub Username:
+    br
+    input(type="text",name="username")
+    br
+    sub Password:
+    br
+    input(type="password",name="password")
+    input(type="hidden",name="grant_type",value="password")
+    input(type="hidden",name="client_id",value="null")
+    input(type="hidden",name="client_secret",value="null")
+    input(type="hidden",name="return_uri",value=returnUri)
+    br
+    input(type="submit",value="Login",style="margin-top:5px;").btn.btn-info
