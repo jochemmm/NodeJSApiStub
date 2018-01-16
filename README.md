@@ -31,10 +31,10 @@ Set app variables through the `.env` file (using dotnet-env library) as a `key=v
 | database | Database name. After executing the deploy script i.e. *test* |
 
 ## Views
-*Use Case diagram:*
+*Use Case diagram:*  
 ![Use Case Diagram](/doc/UseCase_Diagram.png)
 
-*Component diagram:*
+*Component diagram:*  
 ![Component Diagram](/doc/Component_Diagram.png)
 
 ## License:
