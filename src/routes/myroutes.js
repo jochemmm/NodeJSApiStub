@@ -20,6 +20,7 @@ module.exports = router => {
         res.send();
     });
 
+    /** REST call for add routing */
     router.post('/', (req, res) => {
         let newRoute = req.body;
         routeModel.addOrUpdateRoute(newRoute);
@@ -36,6 +37,7 @@ module.exports = router => {
         res.send();
     });
 
+    /** REST call for delete routing */
     router.delete('/', (req, res) => {
         let url = req.query["url"];
         routeModel.deleteRoute(url);
