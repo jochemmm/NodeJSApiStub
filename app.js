@@ -42,7 +42,7 @@ routeModel.init();
 routeConfig.init(express, app);
 
 let server = app.listen(app.get('port'), function () {
-    debug('Express server listening on port ' + server.address().port);
+    console.log('Express server listening on port: ' + server.address().port);
 });
 
 module.exports = app;
